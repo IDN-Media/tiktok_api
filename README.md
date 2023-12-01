@@ -17,7 +17,7 @@ This project is free but you can [!["buy me a coffee"](https://www.buymeacoffee.
 * Dart version 3.x.x
 * A web server to store the App Link (Android) configuration file
 * A web server to store the Universal Link (iOS) configuration file
-* A backend server to exchange Tiktok's authorization code with Tiktok's access token
+* A backend server to exchange Tiktok's authorization code (after successful login) with Tiktok's access token
 
 ## Development Status
 This project is still in development.
