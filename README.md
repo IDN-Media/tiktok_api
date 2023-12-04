@@ -95,3 +95,11 @@ sequenceDiagram
 
   
 ```
+
+### Development
+We are using Flutter [pigeon](https://pub.dev/packages/pigeon) package to provide us with the infrastructure to do birectional communication with the native sides.
+
+1. We defined our [pigeon.dart](pigeon.dart) file. Containing the configuration for the code generator also the messaging data structure and the host interface.
+2. We run `dart run pigeon --input pigeon.dart` and pigeon will generate all the communication infrastructure required also the implementation of the host interface.
+3. We setup the native side host implementation
+3. We instantiate the host interface implementation on our Dart's side and do remoting calls to the native side.
