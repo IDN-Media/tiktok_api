@@ -42,3 +42,54 @@ Please refer to our [Code of Conduct](CODE_OF_CONDUCT.md) document for guideline
 
 ## Developer Guidelines
 
+### Sequence Diagram
+
+### Setup Phase
+```mermaid
+sequenceDiagram
+  Flutter App ->> Pigeon Host on Dart's side: setup()
+  Pigeon Host on Dart's side ->> Pigeon Host on iOS/Android side: setup()
+  Pigeon Host on iOS/Android side ->> Tiktok SDK: setup()
+
+```
+
+### Getting Access Token
+
+```mermaid
+sequenceDiagram
+  Flutter App ->> uni_link: setup App Link/Universal Link()
+  Flutter App ->> Pigeon Host on Dart's side: login()
+  Pigeon Host on Dart's side ->> Pigeon Host on iOS/Android side: login()
+  Pigeon Host on iOS/Android side ->> Tiktok SDK: login()
+  par Login Response and Web Browser running in parallel
+    Tiktok SDK -->> Pigeon Host on iOS/Android side: response{verifier, etc}
+    Pigeon Host on iOS/Android side -->> Pigeon Host on Dart's side: response{verifier, etc}
+    Pigeon Host on Dart's side -->> Flutter App: response{verifier, etc}
+    Flutter App ->> Flutter App: save response{verifier, etc} and wait for uni_link callback
+  and    
+    
+    par Web Browser Opening and the app put to background in parallel
+      Native OS ->> Flutter App: put on background
+    and
+      
+      Tiktok SDK ->> Web Browser: open Tiktok's Login site      
+      Web Browser ->> Web Browser: succesful login
+      Web Browser -->> Native OS: App Link or Universal Link callback {Authorization Code}
+      Native OS ->> Flutter App: put on foreground
+
+      Flutter App -->> Native OS: foreground success
+
+      Native OS -->> uni_link: App Link or Universal Link callback {Authorization Code}
+      uni_link -->> Flutter App: Retrieve Authorization Code from App Link/Universal Link
+      Flutter App ->> Backend Server: exchange token {verifier, Authorization Code}
+      Backend Server ->> Tiktok API: exchange token {verifier, Authorization Code}
+      Tiktok Api -->> Backend Server: access token
+      Backend Server -->> Flutter App: access token
+    end
+
+    
+
+  end
+
+  
+```
