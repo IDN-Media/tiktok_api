@@ -83,7 +83,7 @@ sequenceDiagram
       uni_link -->> Flutter App: Retrieve Authorization Code from App Link/Universal Link
       Flutter App ->> Backend Server: exchange token {verifier, Authorization Code}
       Backend Server ->> Tiktok API: exchange token {verifier, Authorization Code}
-      Tiktok Api -->> Backend Server: access token
+      Tiktok API -->> Backend Server: access token
       Backend Server -->> Flutter App: access token
     end
 
