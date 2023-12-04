@@ -36,4 +36,9 @@ This project is still in development.
 1. Call the `login()` method and pass the scopes: `_tiktokSDKApi.login(['user.info.basi'], 'https://www.abc.com/login-callback/', browserAuthEnabled)`
 1. Once the user authorized your Tiktok app, then Tiktok Login Kit will redirect back to your app using App Link (Android) or Universal Link (iOS). It is your job to handle the App Link or Universal Link redirection (step 3 above) and retrieve the authorization code. You have to exchange this authorization code with an access token. Once you get the access token you can use it to call all Tiktok's API. The exchange process must proceed in the backend. You can follow Tiktok's documentation to retrieve access token [here](https://developers.tiktok.com/doc/oauth-user-access-token-management).
 1. You can see the `example` folder for the sample code on how to use this plugin library2023-12-01 18:10:46
+
+## Code of Conduct
+Please refer to our [Code of Conduct]('./CODE_OF_CONDUCT.md') document for guideline in the community.
+
 ## Developer Guidelines
+
