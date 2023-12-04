@@ -38,7 +38,7 @@ This project is still in development.
 1. You can see the `example` folder for the sample code on how to use this plugin library2023-12-01 18:10:46
 
 ## Code of Conduct
-Please refer to our [Code of Conduct]('./CODE_OF_CONDUCT.md') document for guideline in the community.
+Please refer to our [Code of Conduct](CODE_OF_CONDUCT.md) document for guideline in the community.
 
 ## Developer Guidelines
 
