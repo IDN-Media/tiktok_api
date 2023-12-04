@@ -44,6 +44,8 @@ Please refer to our [Code of Conduct](CODE_OF_CONDUCT.md) document for guideline
 
 ### Sequence Diagram
 
+There are two phases required. First, we have to do some setup to be able to communicate with the native side. Then we proceed with logging in to Tiktok and ask the user to authorize the scope of information that we requested. Once the user authorized then we have to exchange the authorization code with an access token. The access token will contains the impersonation credentials and the scopes. Once we got the access token we can use it to call all Tiktok APIs.
+
 ### Setup Phase
 ```mermaid
 sequenceDiagram
