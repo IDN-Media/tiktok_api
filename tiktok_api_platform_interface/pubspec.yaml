@@ -1,0 +1,21 @@
+name: tiktok_api_platform_interface
+description: Defines the platform interface for tiktok_api plugin
+version: 0.0.2
+repository: https://github.com/irwansyahwii/tiktok_api/tiktok_api_platform_interface
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pigeon: ^14.0.0
+  plugin_platform_interface: ^2.1.7
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  

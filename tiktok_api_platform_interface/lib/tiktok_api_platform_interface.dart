@@ -1,0 +1,1 @@
+export 'src/tiktok_api_platform.dart';
