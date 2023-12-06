@@ -1,5 +1,8 @@
+## 0.0.4
+* Change token passing to the PlatformInterface
+
 ## 0.0.3
-* fix missing exports
+* Fix missing exports
 
 ## 0.0.2
 * Define the abstract class that will be inherit by each platforms implementation

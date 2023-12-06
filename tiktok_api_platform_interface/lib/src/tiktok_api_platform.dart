@@ -5,13 +5,13 @@ import 'package:tiktok_api_platform_interface/src/tiktok_login_result.dart';
 
 
 ///
-/// Defines the common interface for each platform implementation.
+/// Defines the common interface for each platform implementation. 
 /// 
 /// Each platforms implementation must extend this class and
 /// then set the instance property with the real implementation.
 ///
 abstract class TiktokApiPlatform extends PlatformInterface {
-  TiktokApiPlatform({required super.token});
+  TiktokApiPlatform():super(token: _token);
 
   static final Object _token = Object();
   static TiktokApiPlatform? _instance;
