@@ -1,3 +1,6 @@
+## 0.0.3
+* fix missing exports
+
 ## 0.0.2
 * Define the abstract class that will be inherit by each platforms implementation
 * Define the operations of the plugin and the supporting types
