@@ -1,6 +1,6 @@
 name: tiktok_api_ios
 description: iOS implementation of the tiktok_api plugin.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/irwansyahwii/tiktok_api/tiktok_api_ios
 
 environment:
