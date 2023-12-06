@@ -1,6 +1,6 @@
 name: tiktok_api_platform_interface
 description: Defines the platform interface for tiktok_api plugin
-version: 0.0.4
+version: 0.0.5
 repository: https://github.com/irwansyahwii/tiktok_api/tiktok_api_platform_interface
 
 environment:
