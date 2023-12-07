@@ -22,31 +22,12 @@ public class TiktokSDKApiImplementation : TiktokSDKApi {
     
         let authRequest = TikTokAuthRequest(scopes: Set(scopes),
                                             redirectURI: redirectUri)
-        /* Step 2 */
-        authRequest.send { response in
-            /* Step 3 */
-//            let authResponse = response as? TikTokAuthResponse;
-            guard let authResponse = response as? TikTokAuthResponse else { return }
-            
-            if authResponse.errorCode == .noError {
-                
-//                print("Auth code: \(String(describing: authResponse?.authCode))")
-                
-
-                
-                completion(Result.success(TikTokLoginResult(status: TikTokLoginStatus.success,
-                                                            authCode: authResponse.authCode,
-                                                            codeVerifier: authRequest.pkce.codeVerifier)))
-                
-                
-            } else {
-                print("Authorization Failed! error: \(String(describing: authResponse.error)), error desc: \(String(describing: authResponse.description))")
-                    
-                completion(Result.failure(FlutterError(code: String(describing: authResponse.errorCode) , message: authResponse.error, details: authResponse.errorDescription)))
-            }
-            
-        }
         
+            
+        authRequest.send();
+        
+        completion(Result.success(TikTokLoginResult(status: TikTokLoginStatus.success,
+                                                    codeVerifier: authRequest.pkce.codeVerifier)))
 
 
     }
