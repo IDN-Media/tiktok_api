@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "tiktok_api_ios Flutter (iPhone 15 Pro)",
+      "program": "lib/main.dart",
+      "cwd": "tiktok_api_ios/example",
+      "deviceId": "5D03738B-4E6B-402E-9217-01413FF43639",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "tiktok_api example Flutter (iPhone 15 Pro)",
+      "program": "lib/main.dart",
+      "cwd": "tiktok_api/example",
+      "deviceId": "5D03738B-4E6B-402E-9217-01413FF43639",
+      "request": "launch",
+      "type": "dart"
+    },
+  ]
+}
