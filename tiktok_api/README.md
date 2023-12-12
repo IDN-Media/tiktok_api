@@ -9,7 +9,7 @@ This project is free but you can [!["buy me a coffee"](https://www.buymeacoffee.
 
 ## Features
 * (WIP) integration for Android
-* (WIP) integration for iOS
+* (alpha) integration for iOS
 * (planned) integration for web
 
 ## Requirements

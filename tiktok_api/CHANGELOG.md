@@ -1,3 +1,7 @@
+## 0.0.6
+* Update the example with clearer explanation
+* Mark the iOS version as alpha
+
 ## 0.0.5
 * Update tiktok_api_ios to v0.0.4
 
