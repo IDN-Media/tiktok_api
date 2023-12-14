@@ -1,1 +1,4 @@
 rootProject.name = 'tiktok_api_android'
+include ':tiktok-open-sdk-auth'
+include ':tiktok-open-sdk-core'
+include ':tiktok-open-sdk-share'
