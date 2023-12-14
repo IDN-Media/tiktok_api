@@ -1,4 +1,16 @@
 rootProject.name = 'tiktok_api_android'
-include ':tiktok-open-sdk-auth'
+
+// include ':tiktok-open-sdk-auth'
+// project(':tiktok-open-sdk-auth').projectDir = file('./tiktok-open-sdk-auth')
+// include ':tiktok-open-sdk-core'
+// project(':tiktok-open-sdk-core').projectDir = file('./tiktok-open-sdk-core')
+// include ':tiktok-open-sdk-share'
+// project(':tiktok-open-sdk-share').projectDir = file('./tiktok-open-sdk-share')
+
+
 include ':tiktok-open-sdk-core'
+project(':tiktok-open-sdk-auth').projectDir = file('/Users/irwansyah/PROJECTS/PRIVATES/tiktok_api/tiktok_api_android/android/tiktok-open-sdk-core')
+include ':tiktok-open-sdk-auth'
+project(':tiktok-open-sdk-auth').projectDir = file('/Users/irwansyah/PROJECTS/PRIVATES/tiktok_api/tiktok_api_android/android/tiktok-open-sdk-auth')
 include ':tiktok-open-sdk-share'
+project(':tiktok-open-sdk-auth').projectDir = file('/Users/irwansyah/PROJECTS/PRIVATES/tiktok_api/tiktok_api_android/android/tiktok-open-sdk-share')

@@ -18,6 +18,10 @@ pluginManagement {
 include ":app"
 
 apply from: "${settings.ext.flutterSdkPath}/packages/flutter_tools/gradle/app_plugin_loader.gradle"
-include ':tiktok-open-sdk-auth'
+
 include ':tiktok-open-sdk-core'
+project(':tiktok-open-sdk-core').projectDir = new File('/Users/irwansyah/PROJECTS/PRIVATES/tiktok_api/tiktok_api_android/android/tiktok-open-sdk-core')
+include ':tiktok-open-sdk-auth'
+project(':tiktok-open-sdk-auth').projectDir = new File('/Users/irwansyah/PROJECTS/PRIVATES/tiktok_api/tiktok_api_android/android/tiktok-open-sdk-auth')
 include ':tiktok-open-sdk-share'
+project(':tiktok-open-sdk-share').projectDir = new File('/Users/irwansyah/PROJECTS/PRIVATES/tiktok_api/tiktok_api_android/android/tiktok-open-sdk-share')

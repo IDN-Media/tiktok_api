@@ -1,6 +1,6 @@
 name: tiktok_api
 description: Integrate with Tiktok API
-version: 0.0.6
+version: 0.0.7
 repository: https://github.com/irwansyahwii/tiktok_api/tiktok_api
 
 environment:
@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  tiktok_api_android: ^0.0.1
   tiktok_api_ios: ^0.0.4
+  
   tiktok_api_platform_interface: ^0.0.5
 
 dev_dependencies:
@@ -37,6 +39,8 @@ flutter:
     platforms:
       ios: 
         default_package: tiktok_api_ios
+      android: 
+        default_package: tiktok_api_android
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

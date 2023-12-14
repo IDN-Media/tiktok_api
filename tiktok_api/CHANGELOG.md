@@ -1,3 +1,6 @@
+## 0.0.7
+* Add initial release of tiktok_api_android
+
 ## 0.0.6
 * Update the example with clearer explanation
 * Mark the iOS version as alpha

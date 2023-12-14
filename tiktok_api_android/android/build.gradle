@@ -1,21 +1,36 @@
 group 'id.ice.tiktok_api_android'
 version '1.0-SNAPSHOT'
 
+
+
+
+
 buildscript {
     ext.kotlin_version = '1.7.10'
+
+
     repositories {
         google()
         mavenCentral()
+
+        flatDir {
+                dirs 'aar'
+        }                
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        
+        
     }
+
+
 }
 
 allprojects {
     repositories {
+
         google()
         mavenCentral()
     }
@@ -46,12 +61,14 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
     }
 
     dependencies {
         testImplementation 'org.jetbrains.kotlin:kotlin-test'
         testImplementation 'org.mockito:mockito-core:5.0.0'
+
+
     }
 
     testOptions {
@@ -67,42 +84,9 @@ android {
     }
 }
 
-dependencies {
-
+dependencies { 
     implementation project(':tiktok-open-sdk-core')
-    implementation project(':tiktok-open-sdk-auth')
-    implementation project(':tiktok-open-sdk-share')
+    implementation project(':tiktok-open-sdk-auth') 
+    implementation project(':tiktok-open-sdk-share') 
 }
 
-ext{
-    /*
-        Tiktok libraries
-     */
-    buildToolsVersion = "30.0.3"
-    compileSdkVersion = 33
-
-    // androidx
-    androidxActivityVersion = '1.5.0'
-    androidxCoreVersion = '1.7.0'
-    androidxLifecycleVersion = '2.5.1'
-    androidxConstraintlayoutVersion = '2.1.4'
-    androidxAppcompatVersion = '1.4.0'
-    androidxAnnotation = '1.4.0'
-    androidxBrowser = '1.3.0'
-
-    materialVersion = '1.6.1'
-
-    // third party
-    gson = '2.9.1'
-    retrofit = '2.7.0'
-    okhttp = '4.10.0'
-    loggingInterceptor = '3.12.1'
-
-    androidTestVersion = '1.4.0'
-    androidTestJunitVersion = '1.1.3'
-    junitVersion = '4.13.2'
-    mockk = '1.12.5'
-    espressoVersion = '3.4.0'
-    /* ENd Tiktok Libraries */
-
-}

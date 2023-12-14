@@ -230,6 +230,14 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  tiktok_api_platform_interface:
+    dependency: transitive
+    description:
+      name: tiktok_api_platform_interface
+      sha256: "3e89a6d7011b541c0e2ec64ead883d17a5005b6cc4a56262f7424c90a91c6a8d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   vector_math:
     dependency: transitive
     description:

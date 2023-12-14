@@ -1,5 +1,6 @@
 package id.ice.tiktok_api_android
 
+
 import android.app.Activity
 import io.flutter.embedding.android.FlutterActivity
 import androidx.annotation.NonNull
@@ -75,8 +76,7 @@ private  class TiktokAPISDKImplementation(val _activity: Activity): TiktokSDKApi
        TikTokLoginResult(
          status = loginStatus,
          codeVerifier = codeVerifier,
-         scopeName = "",
-         grantedPermissions = emptyList()
+         
        )
      ))
   }

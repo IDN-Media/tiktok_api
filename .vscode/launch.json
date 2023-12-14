@@ -1,6 +1,14 @@
 {
   "configurations": [
     {
+      "name": "tiktok_api_android Flutter (Pixel 5 API 33)",
+      "program": "lib/main.dart",
+      "cwd": "tiktok_api_android/example",
+      "deviceId": "emulator-5554",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
       "name": "tiktok_api_ios Flutter (iPhone 15 Pro)",
       "program": "lib/main.dart",
       "cwd": "tiktok_api_ios/example",
@@ -16,5 +24,20 @@
       "request": "launch",
       "type": "dart"
     },
+    {
+      "name": "Flutter Tests",
+      "program": "test",
+      "cwd": "tiktok_api",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Flutter (Pixel 5 API 33)",
+      "program": "lib/main.dart",
+      "cwd": "tiktok_api/example",
+      "deviceId": "emulator-5554",
+      "request": "launch",
+      "type": "dart"
+    }
   ]
 }
