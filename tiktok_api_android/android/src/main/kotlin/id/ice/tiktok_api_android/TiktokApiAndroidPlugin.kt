@@ -1,36 +1,62 @@
 package id.ice.tiktok_api_android
 
 
-import androidx.annotation.NonNull
-
 import io.flutter.embedding.engine.plugins.FlutterPlugin
+import io.flutter.embedding.engine.plugins.activity.ActivityAware
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
+import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
-import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
+import io.flutter.plugin.common.PluginRegistry.Registrar
+
 
 /** TiktokApiAndroidPlugin */
-class TiktokApiAndroidPlugin: FlutterPlugin, MethodCallHandler {
-  /// The MethodChannel that will the communication between Flutter and native Android
-  ///
-  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
-  /// when the Flutter Engine is detached from the Activity
-  private lateinit var channel : MethodChannel
+class TiktokApiAndroidPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
-  override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "tiktok_api_android")
-    channel.setMethodCallHandler(this)
+  lateinit var  _binaryMessenger : BinaryMessenger;
+
+  @Suppress("deprecation")
+  fun registerWith(registrar: Registrar) {
+    if (registrar.activity() == null) {
+      return;
+    }
+    val instance = TiktokAPISDKImplementation(registrar.activity()!!)
+
+    TiktokSDKApi.setUp(registrar.messenger(), instance)
   }
 
-  override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getPlatformVersion") {
-      result.success("Android ${android.os.Build.VERSION.RELEASE}")
-    } else {
-      result.notImplemented()
-    }
+  override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    _binaryMessenger = binding.binaryMessenger;
   }
 
   override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
-    channel.setMethodCallHandler(null)
+
   }
+
+  override fun onMethodCall(call: MethodCall, result: Result) {
+
+  }
+
+  override fun onAttachedToActivity(binding: ActivityPluginBinding) {
+    val instance = TiktokAPISDKImplementation(binding.activity)
+
+
+    TiktokSDKApi.setUp(_binaryMessenger, instance)
+
+  }
+
+  override fun onDetachedFromActivityForConfigChanges() {
+
+  }
+
+  override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
+
+  }
+
+  override fun onDetachedFromActivity() {
+
+  }
+
+
 }

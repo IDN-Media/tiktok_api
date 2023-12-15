@@ -226,18 +226,19 @@ packages:
   tiktok_api:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.6"
+      name: tiktok_api
+      sha256: d5ae20b5e624e632d1c7587e8e58f225308ab9088084b2e19c6a0c94cdbe3afb
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.11"
   tiktok_api_android:
     dependency: transitive
     description:
       name: tiktok_api_android
-      sha256: d674061ea3a50847ba28f1d042692d51e18e7a82220f3688e247c1c486573371
+      sha256: b544b1fc907a82a18b673b7e254de694b893d06217a4462490cd5da329a6a9a1
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.0.4"
   tiktok_api_ios:
     dependency: transitive
     description:

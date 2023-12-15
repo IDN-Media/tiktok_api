@@ -229,9 +229,9 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.3"
   tiktok_api_platform_interface:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: tiktok_api_platform_interface
       sha256: "3e89a6d7011b541c0e2ec64ead883d17a5005b6cc4a56262f7424c90a91c6a8d"

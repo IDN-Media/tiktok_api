@@ -1,3 +1,21 @@
+## 0.0.13
+* Upgrade tiktok_api_android
+
+## 0.0.12
+* Upgrade tiktok_api_android
+
+## 0.0.11
+* Upgrade tiktok_api_android
+
+## 0.0.10
+* Upgrade tiktok_api_android
+
+## 0.0.9
+* Upgrade tiktok_api_android
+
+## 0.0.8
+* Upgrade tiktok_api_android
+
 ## 0.0.7
 * Add initial release of tiktok_api_android
 

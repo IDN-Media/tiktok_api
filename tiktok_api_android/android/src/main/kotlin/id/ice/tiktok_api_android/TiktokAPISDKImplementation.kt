@@ -2,10 +2,6 @@ package id.ice.tiktok_api_android
 
 
 import android.app.Activity
-import io.flutter.embedding.android.FlutterActivity
-import androidx.annotation.NonNull
-import io.flutter.embedding.engine.FlutterEngine
-import io.flutter.embedding.engine.plugins.FlutterPlugin
 import com.tiktok.open.sdk.auth.AuthApi
 import com.tiktok.open.sdk.auth.AuthRequest
 import com.tiktok.open.sdk.auth.utils.PKCEUtils
@@ -13,7 +9,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 
-private  class TiktokAPISDKImplementation(val _activity: Activity): TiktokSDKApi{
+public  class TiktokAPISDKImplementation(val _activity: Activity): TiktokSDKApi{
 
   var activity: Activity;
   private lateinit var authApi: AuthApi

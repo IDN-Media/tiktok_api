@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:tiktok_api_android/tiktok_api_android.dart';
+import 'package:tiktok_api_platform_interface/tiktok_api_platform_interface.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,10 @@ class _MyAppState extends State<MyApp> {
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
     if (!mounted) return;
+
+    // TiktokApiAndroid.registerWith();
+    TiktokApiPlatform.instance.setup('asdad');
+    _platformVersion = "TiktokApiPlatform.instance.setup success";
 
     setState(() {
       _platformVersion = platformVersion;

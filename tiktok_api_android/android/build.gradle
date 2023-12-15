@@ -1,10 +1,6 @@
 group 'id.ice.tiktok_api_android'
 version '1.0-SNAPSHOT'
 
-
-
-
-
 buildscript {
     ext.kotlin_version = '1.7.10'
 
@@ -12,17 +8,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-
-        flatDir {
-                dirs 'aar'
-        }                
-    }
+   }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        
-        
     }
 
 
@@ -30,9 +20,8 @@ buildscript {
 
 allprojects {
     repositories {
-
         google()
-        mavenCentral()
+        mavenCentral()         
     }
 }
 
@@ -67,8 +56,6 @@ android {
     dependencies {
         testImplementation 'org.jetbrains.kotlin:kotlin-test'
         testImplementation 'org.mockito:mockito-core:5.0.0'
-
-
     }
 
     testOptions {
@@ -85,8 +72,29 @@ android {
 }
 
 dependencies { 
+    // api project(":tiktok-open-sdk-core-lib", configuration = "default")
+    // api project(":tiktok-open-sdk-auth-lib", configuration = "default")
+    // api project(":tiktok-open-sdk-share-lib", configuration = "default")
+
+    // implementation files('../tiktok-open-sdk-core-lib/tiktok-open-sdk-core-release.aar')
+    // implementation files('../tiktok-open-sdk-auth-lib/tiktok-open-sdk-auth-release.aar')
+    // implementation files('../tiktok-open-sdk-auth-lib/tiktok-open-sdk-share-release.aar')
+    
+    // compileOnly files('../tiktok-open-sdk-core-lib/tiktok-open-sdk-core-release.aar')
+    // compileOnly files('../tiktok-open-sdk-auth-lib/tiktok-open-sdk-auth-release.aar')
+    // compileOnly files('../tiktok-open-sdk-auth-lib/tiktok-open-sdk-share-release.aar')
+
+    // implementation files('./aar')
+    // implementation fileTree(include: ['*.jar'], dir: '../aar')
+    // implementation files('../aar/tiktok-open-sdk-core-release.aar')
+    // implementation files('../aar/tiktok-open-sdk-auth-release.aar')
+    
+    // implementation 'com.tiktok.open.sdk:tiktok-open-sdk-core:latest.release'
+
     implementation project(':tiktok-open-sdk-core')
-    implementation project(':tiktok-open-sdk-auth') 
-    implementation project(':tiktok-open-sdk-share') 
+    implementation project(':tiktok-open-sdk-auth')
+    implementation project(':tiktok-open-sdk-share')
 }
+
+
 

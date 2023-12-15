@@ -1,6 +1,6 @@
 name: tiktok_api
 description: Integrate with Tiktok API
-version: 0.0.7
+version: 0.0.13
 repository: https://github.com/irwansyahwii/tiktok_api/tiktok_api
 
 environment:
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tiktok_api_android: ^0.0.1
+  tiktok_api_android: ^0.0.6
   tiktok_api_ios: ^0.0.4
   
   tiktok_api_platform_interface: ^0.0.5

@@ -1,3 +1,6 @@
+## 0.0.5
+* Fix missing plugin registration
+
 ## 0.0.4
 * Fix completion bug
 
