@@ -8,7 +8,7 @@ This project is free but you can [!["buy me a coffee"](https://www.buymeacoffee.
 
 
 ## Features
-* (WIP) integration for Android
+* (alpha) integration for Android
 * (alpha) integration for iOS
 * (planned) integration for web
 
@@ -20,7 +20,7 @@ This project is free but you can [!["buy me a coffee"](https://www.buymeacoffee.
 * A backend server to exchange Tiktok's authorization code (after successful login) with Tiktok's access token
 
 ## Development Status
-This project is still in development.
+This project is still in alpha
 
 ## Demo
 
